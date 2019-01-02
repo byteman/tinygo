@@ -50,6 +50,8 @@ func Compile(pkgName, outpath string, spec *TargetSpec, config *BuildConfig, act
 
 	compilerConfig := compiler.Config{
 		Triple:     spec.Triple,
+		GOOS:       spec.GOOS,
+		GOARCH:     spec.GOARCH,
 		GC:         config.gc,
 		CFlags:     spec.CFlags,
 		LDFlags:    spec.LDFlags,
